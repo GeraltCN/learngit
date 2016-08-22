@@ -34,10 +34,12 @@ ssh-keygen -t rsa -C "ljjjx1997@outlook.com"
 git remote add origin git@server-name:path/repo-name.git
 ** 第一次推送master分支的所有内容
 git push -u origin master
-** 之后推送master分支
+** 之后推送master分支(或其他分支)
 git push origin master
 ** 克隆仓库
 git clone git@github.com:GeraltCN/learngit.git
+** 查看远程库信息
+git remote (-v)
 * 分支管理
 ** 创建分支
 git banch develop
@@ -50,3 +52,30 @@ git branch
 (master) git merge develop
 ** 删除分支
 git branch -d develop
+git branch -D develop 如果分支尚未合并过 则使用 -D
+* BUG分支
+** 生成暂存区
+git stash
+** 查看暂存区列表
+git stash list
+** 从暂存区恢复工作
+git stash apply
+git stash pop 将同时删除stash的内容
+** 从暂存区删除内容
+git stash drop 
+* 标签管理
+** 创建标签
+git tag <tag_name> ————默认打在最新的commit
+git tag -a <tag_name> -m <Message> (<commit_id>)    -a若为-s则为PGP详细Google
+** 查看标签
+git tag
+** 给过往commit打标签
+git tag <tag_name> <commit_id>
+** 查看标签信息
+git show <tag_nmae>
+** 删除标签
+git tag -d <tag_name>                   本地
+git push origin :refs/tags/<tagname>    远程仓库
+** 推送标签到远程
+git push origin <tag_name>
+git push origin --tags   一次推送所有的标签
