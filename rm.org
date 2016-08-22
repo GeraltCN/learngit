@@ -30,3 +30,9 @@ git rm filename
 * 远程仓库
 ** 题外话——生成SSH KEY
 ssh-keygen -t rsa -C "ljjjx1997@outlook.com"
+** 关联远程库
+git remote add origin git@server-name:path/repo-name.git
+** 第一次推送master分支的所有内容
+git push -u origin master
+** 之后推送master分支
+git push origin master
