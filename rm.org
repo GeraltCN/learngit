@@ -5,4 +5,9 @@ git init
 git add <file>
 ** 提交多个文件
 git commit (-m "Message")
+* 时光穿梭机
+** 查看当前仓库状态
+git status
+** 查看修改
+git diff
 ** 
