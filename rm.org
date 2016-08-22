@@ -1,0 +1,8 @@
+* 创建仓库
+git init
+* 文件提交
+** 提交单个文件
+git add <file>
+** 提交多个文件
+git commit (-m "Message")
+** 
