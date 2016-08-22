@@ -38,3 +38,15 @@ git push -u origin master
 git push origin master
 ** 克隆仓库
 git clone git@github.com:GeraltCN/learngit.git
+* 分支管理
+** 创建分支
+git banch develop
+git checkout -b develop (等于创建并切换到develop分支)
+** 切换分支
+git checkout master
+** 查看当前分支
+git branch
+** 将指定分支合并到当前分支
+(master) git merge develop
+** 删除分支
+git branch -d develop
